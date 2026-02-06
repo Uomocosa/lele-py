@@ -10,7 +10,7 @@ authors = [
 ]
 description = "My personal workspace"
 readme = "README.md"
-requires-python = ">=3.9" 
+requires-python = ">=3.8" 
 # COULD NOT ADD ANY license BEACUSE IT CAN CAUSE BREAKS ;;
 # license = {text="MIT AND (Apache-2.0 OR BSD-2-Clause)"}
 # license = "MIT AND (Apache-2.0 OR BSD-2-Clause)"

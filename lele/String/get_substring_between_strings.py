@@ -1,5 +1,4 @@
 import lele
-from lele import __my_variables__ as myvars
 import re
 from loguru import logger
 

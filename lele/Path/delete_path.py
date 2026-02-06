@@ -1,5 +1,4 @@
 import lele
-from lele import __my_variables__ as myvars
 from lele.Path import P
 import os
 import shutil

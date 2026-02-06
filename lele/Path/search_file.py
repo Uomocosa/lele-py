@@ -11,9 +11,11 @@ def search_file(directory, filename):
 
 
 def test_():
-	from lele import __my_variables__ as myvars
-	synchting_Path = myvars.synchting_Path/'Obsidian Vaults'
-	filename = "DnD - Index.md"
-	file_Paths = search_file(synchting_Path, filename)
-	logger.debug(file_Paths)
-	assert file_Paths != []
+    from lele.Metaprogramming import try_import
+    myvars = try_import("lele.__my_variables__")
+    if myvars:
+    	synchting_Path = myvars.synchting_Path/'Obsidian Vaults'
+    	filename = "DnD - Index.md"
+    	file_Paths = search_file(synchting_Path, filename)
+    	logger.debug(file_Paths)
+    	assert file_Paths != []

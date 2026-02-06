@@ -40,17 +40,21 @@ def custom(starting_path, max_depth):
 import pytest
 @pytest.mark.above10s
 def test_fast():
-    from lele import __my_variables__ as myvars
-    starting_path = myvars.synchting_Path / "Obsidian Vaults"
-    logger.debug(f"starting_path: '{starting_path}'")
-    out = get_all_absolute_paths_recursively(starting_path) 
-    logger.debug(len(out))
-    assert len(out) > 0
+    from lele.Metaprogramming import try_import
+    myvars = try_import("lele.__my_variables__")
+    if myvars:
+        starting_path = myvars.synchting_Path / "Obsidian Vaults"
+        logger.debug(f"starting_path: '{starting_path}'")
+        out = get_all_absolute_paths_recursively(starting_path) 
+        logger.debug(len(out))
+        assert len(out) > 0
 
 def test_custom():
-    from lele import __my_variables__ as myvars
-    starting_path = myvars.synchting_Path / "Obsidian Vaults"
-    logger.debug(f"starting_path: '{starting_path}'")
-    out = get_all_absolute_paths_recursively(starting_path, max_depth = 3)
-    logger.debug(len(out))
-    assert len(out) > 0
+    from lele.Metaprogramming import try_import
+    myvars = try_import("lele.__my_variables__")
+    if myvars:
+        starting_path = myvars.synchting_Path / "Obsidian Vaults"
+        logger.debug(f"starting_path: '{starting_path}'")
+        out = get_all_absolute_paths_recursively(starting_path, max_depth = 3)
+        logger.debug(len(out))
+        assert len(out) > 0
