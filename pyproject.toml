@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lele"
+version = "0.0.1"
+authors = [
+  { name="Lele", email="maggiori.samuele@gmail.com" },
+]
+description = "My personal workspace"
+readme = "README.md"
+requires-python = ">=3.9" 
+# COULD NOT ADD ANY license BEACUSE IT CAN CAUSE BREAKS ;;
+# license = {text="MIT AND (Apache-2.0 OR BSD-2-Clause)"}
+# license = "MIT AND (Apache-2.0 OR BSD-2-Clause)"
+
+# To install all dependencies, run:
+# uv sync
+# when updating dependencies, change the corresponding line verions and then do
+# 'uv sync', then test:
+# Ctrl+Shift+P >> task: spawn >> "Pytest: Run ALL tests"
+# You can also upgrade to the latest fix using:
+# uv lock --upgrade
+dependencies = [
+    "new-import-system @ git+https://github.com/Uomocosa/new-python-import-system",
+    "new-import-system",
+    "pytest",
+    "tyro",
+    "loguru",
+    "python-rapidjson",
+]
+
+[tool.setuptools]
+packages = [
+    "lele",
+]
+
+[tool.pytest.ini_options]
+python_files = "*.py"
+testpaths = ["lele"]
+norecursedirs = [
+  "__pycache__",
+  ".pytest_cache",
+  ".git",
+  ".zed",
+  ".vscode",
+  "__HELPER_DIR__",
+]
+markers = [
+    "verbose: tests that have some kind of output",
+    "todo: test yet to implement",
+    "above10s: test that require more than 10 seconds",
+    "unreliable: test that depends on external factors, in the future it will fail",
+    "infinite: test will not finish",
+]
+addopts = "-m 'not verbose and not todo and not above10s and not unreliable and not infinite'"
