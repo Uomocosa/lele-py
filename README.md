@@ -12,4 +12,4 @@
 
 # My personal core library
 - This is intended as a personal core library for all my other python projects.
-- It uses my [new-python-import-system](https://github.com/Uomocosa/new-python-import-system), the import might seem more magical than the usual.
+- It uses my [new-python-import-system](https://github.com/Uomocosa/new-python-import-system). The imports might seem more _magical_ than the usual.
