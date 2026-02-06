@@ -24,7 +24,6 @@ requires-python = ">=3.9"
 # uv lock --upgrade
 dependencies = [
     "new-import-system @ git+https://github.com/Uomocosa/new-python-import-system",
-    "new-import-system",
     "pytest",
     "tyro",
     "loguru",

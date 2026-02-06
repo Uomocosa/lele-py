@@ -97,7 +97,6 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "loguru" },
-    { name = "new-import-system" },
     { name = "new-import-system", git = "https://github.com/Uomocosa/new-python-import-system" },
     { name = "pytest" },
     { name = "python-rapidjson" },
