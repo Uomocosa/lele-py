@@ -1,6 +1,8 @@
 import new_import_system
 new_import_system.install(__file__)
 
-from lele.Path import P
-from lele.Metaprogramming import isinstance # bad idea ;; context switching
-from lele.Metaprogramming import get_type_from_lazy_module as type # bad idea ;; context switching
+# Simpler exports/imports:
+import lele
+P = lele.Path.P # for example you can call it via lele.P instead of lele.Path.P
+isinstance = lele.Metaprogramming.isinstance
+type = lele.Metaprogramming.get_type_from_lazy_module
