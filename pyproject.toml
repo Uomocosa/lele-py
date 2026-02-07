@@ -31,9 +31,9 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = [
-    "lele",
-]
+packages = { find = { where = ["."], include = [
+    "lele*",
+] } }
 
 [tool.pytest.ini_options]
 python_files = "*.py"
