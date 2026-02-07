@@ -1,6 +1,6 @@
 // TEST
 {
-    "function": "Type <class 'new_import_system.make_module_callable.CallableModule'> not serializable",
+    "function": "Type <class 'new_import_system.LazyModule.LazyModule'> not serializable",
     "arg": ".",
     "result": "C:\\Users\\acer\\Desktop\\Samuele\\Syncthing\\LWF - LightWeigth Folder\\[P] Python\\lele-py"
 }
