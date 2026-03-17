@@ -9,11 +9,11 @@ class CleanJSONLSink:
         self.file = filepath.open("w")
         
     def __call__(self, message):
-        # Extract ONLY the bound variables and write as JSON
-        json.dump(message.record["extra"], self.file)
+        log_data = message.record["extra"].copy()
+        if "extra" in log_data: del log_data["extra"]
+        json.dump(log_data, self.file, default=str)
         self.file.write("\n")
-        self.file.flush()
-        
+        self.file.flush()        
         
 import pytest
 @pytest.mark.todo
